@@ -22,3 +22,19 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+// SCRIPT 
+
+// Enqueue script
+function custom_enqueue_scripts() {
+    // Enregistrez le script JavaScript
+    wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/script.js', array('jquery'), null, true);
+
+    // Passez les données nécessaires au script
+    wp_localize_script('custom-script', 'popup_data', array(
+        'popup_id' => 'contactPopup',
+    ));
+}
+
+
+add_action('wp_enqueue_scripts', 'custom_enqueue_scripts');

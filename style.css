@@ -10,4 +10,218 @@ Version: 1.9.1695891181
 Updated: 2023-09-28 08:53:01
 
 */
+/* FONT*/
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/Users/simon/Local Sites/motaphoto/app/public/wp-content/themes/motaphoto/media/font/Space_Mono/SpaceMono-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/Users/simon/Local Sites/motaphoto/app/public/wp-content/themes/motaphoto/media/font/Space_Mono/SpaceMono-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/Users/simon/Local Sites/motaphoto/app/public/wp-content/themes/motaphoto/media/font/Space_Mono/SpaceMono-Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+  }  
+  
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/Users/simon/Local Sites/motaphoto/app/public/wp-content/themes/motaphoto/media/font/Space_Mono/SpaceMono-BoldItalic.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+ :root{
+    font-family: 'Space Mono', monospace;
+    background-color: white;
+  }
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: white
+}
+a{
+    text-decoration: none;
+}
 
+
+
+/*HEADER*/
+
+header{
+    width: 100vw;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right:  2rem;
+    text-decoration: none;
+}
+.header-logo{
+    width: 50%;
+    padding-left: 2em;
+}
+.header-logo img {
+    max-width: 300px;
+}
+.header-navigation{
+width: 50%;
+display: flex;
+justify-content: flex-end;
+}
+.header-navigation ul {
+    width: 60%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navigation li {
+    font-family:"Space Mono";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20,7px;
+    align-items: center;
+    width: 8em;   
+}
+#contactButton a:active {
+  text-decoration: none;
+}
+
+.hero{
+    width: 100vw;
+    height: 90vh;
+    background-image: url("./media/hero_header/nathalie-11.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero img {
+    width: 80%;
+    height: 20%;
+}
+
+/*FOOTER*/
+  footer {
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  
+  footer::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 2px;
+    background-color: black;
+    transform: translateX(-50%);
+  }
+  
+  .footer-menu {
+    margin-top: 10px;
+  }
+  
+  .footer-menu a {
+    font-family:"Space Mono";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20,7px;
+    margin: 0 10px;
+    color: #000;
+  }
+
+
+/*POP-UP*/
+
+.pop-up {
+    width: 60%;
+    display: none;
+    position: absolute;
+    top: 31em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 8px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .close-button {
+    position: absolute;
+    top: -3px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333; /* Choisissez votre couleur */
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5em;
+}
+  .contact_header{
+    width: 100%;
+    height: 10%;
+  }
+
+  /* FORMULAIRE DE CONTACT */
+
+  .contact_form{
+    font-family: "Space Mono";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding-left: 2em;
+    margin-top: 1em;
+  }
+ 
+  /* Style pour le champ de formulaire */
+  .contact_form input[type="text"],
+  .contact_form input[type="email"],
+  .site textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+  }
+  
+  /* Style pour le bouton d'envoi */
+  .contact_form input[type="submit"] {
+      width: 100%;
+      background-color: lightgray !important;
+      color: black !important;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+  }
+  
+  /* Style pour les messages de confirmation ou d'erreur */
+  .contact_form-response-output {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+  }
+  
+  /* Ajoutez plus de styles selon vos besoins */
